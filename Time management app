@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Management App</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body style="color: ghostwhite; background: darkred; font-family:new time roman;">
+    <div class="container">
+        <h1>Time Management App</h1>
+        <form id="activityForm">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br><br>
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required><br><br>
+            <label for="activity">Activity:</label>
+            <input type="text" id="activity" name="activity" required><br><br>
+            <button type="submit">Add Activity</button>
+        </form>
+        <div id="activitiesList">
+            <!-- Activities will be displayed here -->
+
+        <br>
+            <h3 style="text-align: center;">Order made easier by Shem ;)</h3>
+        </div>
+    </div>
+    <script src="script.js">
+        document.getElementById('activityForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const date = document.getElementById('date').value;
+    const time = document.getElementById('time').value;
+    const activity = document.getElementById('activity').value;
+    
+    // Create a new activity object
+    const newActivity = { date, time, activity };
+    
+    // Perform actions with this data like sending to server, adding to list, etc.
+    console.log(newActivity);
+});
+
+<?php
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "database_name";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+// Insert new activity into the database
+$date = $_POST['date'];
+$time = $_POST['time'];
+$activity = $_POST['activity'];
+
+$sql = "INSERT INTO activities (date, time, activity) VALUES ('$date', '$time', '$activity')";
+
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
+    </script>
+    
+
+</body>
+</html>
