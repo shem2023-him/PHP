@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+    <title>LOGIN</title>
     <style>
        
         body {
@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             background-color: transparent; 
         }
 
-        /* Styles for the form elements */
+       
         input[type="text"],
         input[type="password"],
         input[type="submit"] {
