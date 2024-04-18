@@ -1,5 +1,4 @@
 <?php
-// User authentication functions
 function isUserLoggedIn() {
     return isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true;
 }
@@ -11,7 +10,6 @@ function redirectIfNotLoggedIn() {
     }
 }
 
-// Add new activity
 function addActivity($activity, $start_time, $end_time) {
     global $conn;
 
