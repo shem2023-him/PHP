@@ -63,8 +63,6 @@
             
             document.getElementById("calendar").innerHTML = calendar;
         }
-
-        // Update the calendar
         updateCalendar();
     </script>
 </head>
