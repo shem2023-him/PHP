@@ -6,7 +6,6 @@ require_once "db.php";
 
 redirectIfNotLoggedIn();
 
-// Handle add activity form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $activity = $_POST["activity"];
     $start_time = $_POST["start_time"];
