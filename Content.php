@@ -6,7 +6,6 @@ require_once "db.php";
 
 redirectIfNotLoggedIn();
 
-// Retrieve user's activities
 $user_id = $_SESSION["id"];
 $sql = "SELECT id, activity, start_time, end_time FROM activities WHERE user_id = ?";
 $stmt = $conn->prepare($sql);
@@ -68,7 +67,7 @@ $stmt->close();
         }
     </script>
          <div class="custom-text">
-            <P>Developed CREATED BY SHEM DDUNGU</P>
+            <P>CREATED BY SHEM DDUNGU</P>
         </div>
 </body>
 </html>
